@@ -1,0 +1,30 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8081
+#    - type: https
+#      port: 8443
+#      keyStorePath: ./keystore.p12
+#      keyStorePassword: admin123
+#      keyStoreType: PKCS12
+#      certAlias: server
+#      supportedProtocols: [TLSv1.2]
+#      validateCerts: false
+#      needClientAuth: true
+#      trustStorePath: ./cacerts.jks
+#      trustStorePassword: changeit
+#      trustStoreType: JKS
+#  adminConnectors:
+#    - type: http
+#      port: 8091
+
+logging:
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+  loggers:
+    "org.asamaraw": INFO
+    "io.dropwizard": INFO
+  appenders:
+    - type: console
+      threshold: ALL
+      target: stdout
